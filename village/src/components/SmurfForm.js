@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../App.css';
+
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class SmurfForm extends Component {
     }
 
     axios
-    post('http://localhost:3333/smurfs', smurf)
+    .post('http://localhost:3333/smurfs', smurf)
     .then(res => console.log(res))
     .catch(err => console.log(err))
 
